@@ -1,3 +1,0 @@
-# getskillsapp
-
-Skills public website
