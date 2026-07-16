@@ -190,39 +190,81 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 36px;
+  margin-top: 30px;
 }
 
 .store-button {
   display: inline-flex;
   align-items: center;
-  min-width: 196px;
-  min-height: 58px;
+  min-width: 220px;
+  min-height: 64px;
   gap: 12px;
-  padding: 9px 16px;
-  border: 1px solid var(--white);
-  border-radius: 6px;
-  background: var(--white);
-  color: var(--app-black);
-  font-size: 1.05rem;
-  font-weight: 800;
+  padding: 8px 16px;
+  border: 1px solid #a6a6a6;
+  border-radius: 8px;
+  background: #000000;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.35rem;
+  font-weight: 500;
   line-height: 1.1;
+  text-decoration: none;
+}
+
+.store-button:hover {
+  border-color: var(--white);
+}
+
+.store-button:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
 }
 
 .store-button svg {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   flex: 0 0 auto;
   fill: currentColor;
 }
 
+.store-button__label,
+.store-button__label span {
+  display: block;
+}
+
 .store-button small {
   display: block;
-  margin-bottom: 3px;
-  color: #303030;
-  font-size: 0.72rem;
-  font-weight: 700;
-  line-height: 1;
+  margin-bottom: 1px;
+  color: var(--white);
+  font-size: 0.67rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.store-button--google svg {
+  width: 34px;
+  height: 34px;
+}
+
+.store-button--google small {
+  font-size: 0.61rem;
+  text-transform: uppercase;
+}
+
+.store-button--google .play-mark__left {
+  fill: #34a853;
+}
+
+.store-button--google .play-mark__top {
+  fill: #4285f4;
+}
+
+.store-button--google .play-mark__bottom {
+  fill: #fbbc04;
+}
+
+.store-button--google .play-mark__tip {
+  fill: #ea4335;
 }
 
 .detail-columns {
@@ -478,7 +520,7 @@ h3 {
 @media (max-width: 520px) {
   .hero {
     min-height: 82svh;
-    padding: 42px 0;
+    padding: 28px 0;
   }
 
   h1 {
@@ -523,6 +565,7 @@ h3 {
   .store-buttons {
     display: grid;
     grid-template-columns: 1fr;
+    margin-top: 24px;
   }
 
   .store-button {
